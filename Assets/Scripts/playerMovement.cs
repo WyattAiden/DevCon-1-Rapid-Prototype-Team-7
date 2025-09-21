@@ -7,6 +7,9 @@ public class playerMovement : MonoBehaviour
     private Rigidbody rb;
     //Player move speed
     public float moveSpeed = 10;
+
+    //Player jump height
+    public float jumpHeight = 5;
     
     // Start is called before the first frame update
     void Start()
@@ -26,6 +29,16 @@ public class playerMovement : MonoBehaviour
         if (Input.GetKey(KeyCode.D))
         {
             rb.MovePosition(transform.position + Vector3.right * moveSpeed * Time.deltaTime);
+        }
+
+        if (Input.GetKey(KeyCode.W))
+        {
+            rb.MovePosition(transform.position + Vector3.forward * moveSpeed * Time.deltaTime);
+        }
+
+        if (Input.GetKey(KeyCode.S))
+        {
+            rb.MovePosition(transform.position + Vector3.back * moveSpeed * Time.deltaTime);
         }
     }
 }
