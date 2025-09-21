@@ -10,35 +10,56 @@ public class playerMovement : MonoBehaviour
 
     //Player jump height
     public float jumpHeight = 5;
+
+    private bool perspectiveSwap;
     
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody>();
+        perspectiveSwap = false;
     }
 
     // Update is called once per frame
     void FixedUpdate()
     {
-
-        if (Input.GetKey(KeyCode.A))
+        if (Input.GetKeyDown(KeyCode.R) && perspectiveSwap)
         {
-            rb.MovePosition(transform.position + Vector3.left * moveSpeed * Time.deltaTime);
+            perspectiveSwap = false;
         }
 
-        if (Input.GetKey(KeyCode.D))
+        if (Input.GetKeyDown(KeyCode.R) && !perspectiveSwap)
         {
-            rb.MovePosition(transform.position + Vector3.right * moveSpeed * Time.deltaTime);
+            perspectiveSwap = true;
         }
 
-        if (Input.GetKey(KeyCode.W))
+
+        if (!perspectiveSwap)
         {
-            rb.MovePosition(transform.position + Vector3.forward * moveSpeed * Time.deltaTime);
+            if (Input.GetKey(KeyCode.A))
+            {
+                rb.MovePosition(transform.position + Vector3.left * moveSpeed * Time.deltaTime);
+            }
+
+            if (Input.GetKey(KeyCode.D))
+            {
+                rb.MovePosition(transform.position + Vector3.right * moveSpeed * Time.deltaTime);
+            }
+
+            if (Input.GetKey(KeyCode.W))
+            {
+                rb.MovePosition(transform.position + Vector3.forward * moveSpeed * Time.deltaTime);
+            }
+
+            if (Input.GetKey(KeyCode.S))
+            {
+                rb.MovePosition(transform.position + Vector3.back * moveSpeed * Time.deltaTime);
+            }
         }
 
-        if (Input.GetKey(KeyCode.S))
+        if (perspectiveSwap)
         {
-            rb.MovePosition(transform.position + Vector3.back * moveSpeed * Time.deltaTime);
+
         }
     }
 }
