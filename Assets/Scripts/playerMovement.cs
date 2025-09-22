@@ -12,11 +12,14 @@ public class playerMovement : MonoBehaviour
     //Player jump height
     public float jumpHeight = 8f;
 
-    private bool perspectiveSwap;
+    public bool perspectiveSwap;
+
+    private Animator anim;
     
     // Start is called before the first frame update
     void Start()
     {
+        anim = GetComponent<Animator>();
         rb = GetComponent<Rigidbody>();
         perspectiveSwap = false;
     }
@@ -28,11 +31,13 @@ public class playerMovement : MonoBehaviour
             if (perspectiveSwap)
             {
                 perspectiveSwap = false;
+                anim.SetBool("perspectiveSwap", perspectiveSwap);
             }
             
             else
             {
                 perspectiveSwap = true;
+                anim.SetBool("perspectiveSwap", perspectiveSwap);
             }
             
         }
