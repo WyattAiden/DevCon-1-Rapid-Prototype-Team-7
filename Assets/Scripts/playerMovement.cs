@@ -59,7 +59,20 @@ public class playerMovement : MonoBehaviour
 
         if (perspectiveSwap)
         {
+            if (Input.GetKey(KeyCode.A))
+            {
+                rb.MovePosition(transform.position + Vector3.left * moveSpeed * Time.deltaTime);
+            }
 
+            if (Input.GetKey(KeyCode.D))
+            {
+                rb.MovePosition(transform.position + Vector3.right * moveSpeed * Time.deltaTime);
+            }
+
+            if (Input.GetKeyDown(KeyCode.W))
+            {
+                rb.AddForce(Vector3.up * jumpHeight, ForceMode.Impulse);
+            }
         }
     }
 }
