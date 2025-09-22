@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Diagnostics.Tracing;
 using UnityEngine;
 
 public class playerMovement : MonoBehaviour
@@ -9,7 +10,7 @@ public class playerMovement : MonoBehaviour
     public float moveSpeed = 10;
 
     //Player jump height
-    public float jumpHeight = 5;
+    public float jumpHeight = 8f;
 
     private bool perspectiveSwap;
     
@@ -20,19 +21,32 @@ public class playerMovement : MonoBehaviour
         perspectiveSwap = false;
     }
 
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            if (perspectiveSwap)
+            {
+                perspectiveSwap = false;
+            }
+            
+            else
+            {
+                perspectiveSwap = true;
+            }
+            
+        }
+
+
+        if (perspectiveSwap && Input.GetKeyDown(KeyCode.W))
+        {
+            rb.AddForce(Vector3.up * jumpHeight, ForceMode.Impulse);
+        }
+    }
+
     // Update is called once per frame
     void FixedUpdate()
     {
-        if (Input.GetKeyDown(KeyCode.R) && perspectiveSwap)
-        {
-            perspectiveSwap = false;
-        }
-
-        if (Input.GetKeyDown(KeyCode.R) && !perspectiveSwap)
-        {
-            perspectiveSwap = true;
-        }
-
 
         if (!perspectiveSwap)
         {
@@ -67,11 +81,6 @@ public class playerMovement : MonoBehaviour
             if (Input.GetKey(KeyCode.D))
             {
                 rb.MovePosition(transform.position + Vector3.right * moveSpeed * Time.deltaTime);
-            }
-
-            if (Input.GetKeyDown(KeyCode.W))
-            {
-                rb.AddForce(Vector3.up * jumpHeight, ForceMode.Impulse);
             }
         }
     }
