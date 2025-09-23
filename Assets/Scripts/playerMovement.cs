@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics.Tracing;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class playerMovement : MonoBehaviour
@@ -11,6 +12,8 @@ public class playerMovement : MonoBehaviour
 
     //Player jump height
     public float jumpHeight = 8f;
+
+    private bool onGround;
 
     public bool perspectiveSwap;
 
@@ -42,8 +45,7 @@ public class playerMovement : MonoBehaviour
             
         }
 
-
-        if (perspectiveSwap && Input.GetKeyDown(KeyCode.W))
+        if (perspectiveSwap && Input.GetKeyDown(KeyCode.W) && onGround)
         {
             rb.AddForce(Vector3.up * jumpHeight, ForceMode.Impulse);
         }
@@ -88,5 +90,14 @@ public class playerMovement : MonoBehaviour
                 rb.MovePosition(transform.position + Vector3.right * moveSpeed * Time.deltaTime);
             }
         }
+    }
+    void OnCollisionStay(Collision collision)
+    {
+        onGround = true;
+    }
+
+    void OnCollisionExit(Collision collision)
+    {
+        onGround = false;
     }
 }
