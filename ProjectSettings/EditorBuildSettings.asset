@@ -4,5 +4,8 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/ethanDevSceneMovement.unity
+    guid: 6794c67fadca3d44db727b57af130161
   m_configObjects: {}

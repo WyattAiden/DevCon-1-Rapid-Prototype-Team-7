@@ -1,0 +1,196 @@
+{
+  "main": {
+    "id": "981337e78bb9bc47",
+    "type": "split",
+    "children": [
+      {
+        "id": "27873ec9606ba52d",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "6f5cf62b3f179df6",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "DevCon1-Rapid Prototyping.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "DevCon1-Rapid Prototyping"
+            }
+          }
+        ]
+      },
+      {
+        "id": "5622ea154cfa5456",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "7f643b2c8274ec4d",
+            "type": "leaf",
+            "state": {
+              "type": "graph",
+              "state": {},
+              "icon": "lucide-git-fork",
+              "title": "Graph view"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "8243a8ff1297d805",
+    "type": "split",
+    "children": [
+      {
+        "id": "4a046a9a2f35acfc",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "44a607e721faa7d5",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "678d42124a697b91",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "d4c1ca3061c97bef",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "71f6202ee3560f2c",
+    "type": "split",
+    "children": [
+      {
+        "id": "66f481620691c121",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "91339cc5fa5d9c74",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "DevCon1-Rapid Prototyping.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for DevCon1-Rapid Prototyping"
+            }
+          },
+          {
+            "id": "c10496b8cecfe81f",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "DevCon1-Rapid Prototyping.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from DevCon1-Rapid Prototyping"
+            }
+          },
+          {
+            "id": "03b1259ce0e19d62",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "1e457db32ff99977",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "DevCon1-Rapid Prototyping.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline of DevCon1-Rapid Prototyping"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "bases:Create new base": false
+    }
+  },
+  "active": "44a607e721faa7d5",
+  "lastOpenFiles": [
+    "Welcome.md",
+    "DevCon1-Rapid Prototyping.md",
+    "Images/VzL_Image_1.png",
+    "Images/sNq_Image_2.png",
+    "Images"
+  ]
+}
